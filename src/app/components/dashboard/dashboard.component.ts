@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
 
 		setTimeout(() => {
 			this.isLoadingView = false;
-		}, 2000);
+		}, 3000);
 	}
 
 }
