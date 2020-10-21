@@ -1,4 +1,4 @@
 <div class="teetimes-comp" fxLayout="row" fxLayoutAlign="center center" >
 	<iframe fxFlexFill [hidden]="loadingDatas" frameBorder="0" style="position: absolute; height: 100%; border: none"
-		[src]="sanitizer.bypassSecurityTrustResourceUrl(iframeUrl)"></iframe>
+		[src]="src ? src : null"></iframe>
 </div>

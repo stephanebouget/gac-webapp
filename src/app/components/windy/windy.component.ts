@@ -3,7 +3,9 @@ import {
 	Input,
 	OnInit
 } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import {
+	DomSanitizer
+} from '@angular/platform-browser';
 
 @Component({
 	selector: 'app-windy',
@@ -14,11 +16,13 @@ export class WindyComponent implements OnInit {
 
 	@Input() iframeUrl: string;
 	loadingDatas = false;
+	src: any;
 
 	constructor(public sanitizer: DomSanitizer) {}
 
 	ngOnInit(): void {
 		// this.iframeUrl = this.iframeUrl + Date.now();
+		this.src = this.sanitizer.bypassSecurityTrustResourceUrl(this.iframeUrl);
 	}
 
 }

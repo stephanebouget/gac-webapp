@@ -14,11 +14,13 @@ export class TeetimesComponent implements OnInit {
 	iframeUrl = 'https://web.ffgolf.org/ffgolf/tee/tee.php?gk=9fa9379b2460c7c99b3ce48face442d6&';
 
 	loadingDatas = false;
+	src: any;
 
 	constructor(public sanitizer: DomSanitizer) {}
 
 	ngOnInit(): void {
 		this.iframeUrl = this.iframeUrl + Date.now();
+		this.src = this.sanitizer.bypassSecurityTrustResourceUrl(this.iframeUrl);
 
 	}
 

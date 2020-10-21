@@ -1,4 +1,4 @@
 <div class="windy-comp" fxLayout="row" fxLayoutAlign="center center" >
-	<iframe fxFlexFill [hidden]="loadingDatas" frameBorder="0"
-		[src]="sanitizer.bypassSecurityTrustResourceUrl(iframeUrl)"></iframe>
+	<iframe fxFlexFill frameBorder="0"
+		[src]="src ? src : null"></iframe>
 </div>

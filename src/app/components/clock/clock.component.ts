@@ -15,11 +15,13 @@ export class ClockComponent implements OnInit {
 
 	iframeUrl = 'https://static.rolex.com/clocks/2020/Eric_Lamaze_Desktop_HTML_140x200/rolex.html?';
 	loadingDatas = false;
+	src: any;
 
 	constructor(public sanitizer: DomSanitizer) {}
 
 	ngOnInit(): void {
 		this.iframeUrl = this.iframeUrl + Date.now();
+		this.src = this.sanitizer.bypassSecurityTrustResourceUrl(this.iframeUrl);
 	}
 
 }

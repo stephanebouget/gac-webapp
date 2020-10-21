@@ -1,4 +1,12 @@
 .dashboard-comp {
+	#loading{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: black;
+		color:white;
+		z-index: 999;
+	}
 	.dashboard-comp-content {
 		padding: 18px;
 		flex-wrap: wrap;
