@@ -1,21 +1,24 @@
-<div class="dashboard-comp" fxLayoutGap="20px" fxFlexFill fxLayout="row" fxLayoutAlign="center center">
-	<div fxLayoutGap="20px" class="col" fxFlex fxLayout="column" fxLayoutAlign="start center">
-		<img src='assets/img/banner.png' width="400px" height="80px">
-		<div fxLayoutGap="20px" fxLayout="row" fxLayoutAlign="start start">
-			<app-current-weather-item class="box"></app-current-weather-item>
-			<app-clock class="box"></app-clock>
+<div class="dashboard-comp" fxLayout="row" fxLayoutAlign="center center">
+	<div class="dashboard-comp-content" fxLayout="row"  fxLayoutAlign="start start">
+		<div  class="col" fxFlex fxLayout="column" fxLayoutAlign="start center">
+			<img class="box" src='assets/img/banner.png' width="400px" height="80px">
+			<div  fxLayout="row" fxLayoutAlign="start start">
+				<app-current-weather-item class="box  box-md"></app-current-weather-item>
+				<app-clock class="box box-sm"></app-clock>
+			</div>
+			<app-weather class="box"></app-weather>
 		</div>
-		<app-weather  class="box"></app-weather>
-	</div>
-	<div fxLayoutGap="20px" class="col" fxFlex fxLayout="column" fxLayoutAlign="start center">
-		<app-weather-week  class="box"></app-weather-week>
-	</div>
-	<div fxLayoutGap="20px" class="col col-big" fxFlex fxLayout="column" fxLayoutAlign="start center">
-		<app-windy [iframeUrl]="iframeWindy1Url" class="box"></app-windy>
-		<app-windy [iframeUrl]="iframeWindy2Url" class="box"></app-windy>
-	</div>
-	<div fxLayoutGap="20px" class="col" fxFlex fxLayout="column" fxLayoutAlign="start center">
-		<app-teetimes  class="box"></app-teetimes>
-		<app-competitions  class="box"></app-competitions>
+		<div  class="col" fxFlex fxLayout="column" fxLayoutAlign="start center">
+			<app-weather-week class="box"></app-weather-week>
+		</div>
+		<div  class="col col-big" fxFlex fxLayout="column" fxLayoutAlign="start center">
+			<app-windy [iframeUrl]="iframeWindy1Url" class="box box-big"></app-windy>
+			<app-windy [iframeUrl]="iframeWindy3Url" class="box box-big"></app-windy>
+			<app-windy [iframeUrl]="iframeWindy2Url" class="box box-big"></app-windy>
+		</div>
+		<div  class="col" fxFlex fxLayout="column" fxLayoutAlign="start center">
+			<app-teetimes class="box"></app-teetimes>
+			<app-competitions class="box"></app-competitions>
+		</div>
 	</div>
 </div>
