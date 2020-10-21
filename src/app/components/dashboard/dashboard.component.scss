@@ -5,6 +5,8 @@
 		height: 100%;
 		background: black;
 		color:white;
+		background: linear-gradient(132deg, rgba(13,17,33,1) 0%, rgba(33,44,83,1) 100%);
+
 		z-index: 999;
 	}
 	.dashboard-comp-content {
@@ -27,6 +29,7 @@
 		.box {
 			background: white;
 			margin:10px;
+			position: relative;
 			// margin: 0.5em 1em;
 			// border: 1px solid;
 			border-radius: 3px;
