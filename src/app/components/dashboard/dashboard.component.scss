@@ -6,10 +6,12 @@
 		background: black;
 		color:white;
 		background: linear-gradient(132deg, rgba(13,17,33,1) 0%, rgba(33,44,83,1) 100%);
-
+		top: 0;
 		z-index: 999;
 	}
 	.dashboard-comp-content {
+		position: absolute;
+		top: 0;
 		padding: 18px;
 		flex-wrap: wrap;
 
