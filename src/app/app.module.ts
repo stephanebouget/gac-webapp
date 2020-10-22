@@ -38,9 +38,18 @@ import {
 import {
 	CompetitionsComponent
 } from './components/competitions/competitions.component';
-import { ClockComponent } from './components/clock/clock.component';
-import { WindyComponent } from './components/windy/windy.component';
-import { BookingComponent } from './components/booking/booking.component';
+import {
+	ClockComponent
+} from './components/clock/clock.component';
+import {
+	WindyComponent
+} from './components/windy/windy.component';
+import {
+	BookingComponent
+} from './components/booking/booking.component';
+import {
+	CamComponent
+} from './components/cam/cam.component';
 
 @NgModule({
 	declarations: [
@@ -51,7 +60,8 @@ import { BookingComponent } from './components/booking/booking.component';
 		CompetitionsComponent,
 		WindyComponent,
 		ClockComponent,
-		BookingComponent
+		BookingComponent,
+		CamComponent
 	],
 	imports: [
 		BrowserModule,

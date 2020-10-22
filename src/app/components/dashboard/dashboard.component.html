@@ -1,7 +1,6 @@
 <div class="dashboard-comp" fxLayout="row" fxLayoutAlign="center center">
 	<div id="loading" fxFlexFill fxLayout="column" fxLayoutAlign="center center" *ngIf="isLoadingView">
 		<img class="box" src='assets/img/logo.png' width="156px" height="72px">
-		<!-- <span>GAC</span> -->
 	</div>
 	<div class="dashboard-comp-content" fxLayout="row" fxLayoutAlign="start start">
 		<div class="col" fxFlex fxLayout="column" fxLayoutAlign="start center">
@@ -14,13 +13,7 @@
 		</div>
 		<div class="col" fxFlex fxLayout="column" fxLayoutAlign="start center">
 			<app-weather-week class="box"></app-weather-week>
-			<div class="box" style="height: 214px;">
-				<iframe width="380" height="214"
-					src="https://www.youtube.com/embed/ui_9qAoosls?showinfo=0&autoplay=1&controls=0&fs=0&loop=1&modestbranding=1&iv_load_policy=3"
-					frameborder="0" style="position: absolute;"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen></iframe>
-			</div>
+			<app-cam class="box"></app-cam>
 		</div>
 		<div class="col col-big" fxFlex fxLayout="column" fxLayoutAlign="start center">
 			<app-windy [iframeUrl]="iframeWindy1Url" class="box box-big"></app-windy>

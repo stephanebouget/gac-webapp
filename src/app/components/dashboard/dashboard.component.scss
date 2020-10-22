@@ -1,14 +1,15 @@
 .dashboard-comp {
-	#loading{
+	#loading {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		background: black;
-		color:white;
-		background: linear-gradient(132deg, rgba(13,17,33,1) 0%, rgba(33,44,83,1) 100%);
+		color: white;
+		background: linear-gradient(132deg, rgba(13, 17, 33, 1) 0%, rgba(33, 44, 83, 1) 100%);
 		top: 0;
 		z-index: 999;
 	}
+
 	.dashboard-comp-content {
 		position: absolute;
 		top: 0;
@@ -30,7 +31,7 @@
 
 		.box {
 			background: white;
-			margin:10px;
+			margin: 10px;
 			position: relative;
 			// margin: 0.5em 1em;
 			// border: 1px solid;
@@ -120,6 +121,10 @@
 		app-weather-week {
 
 			min-height: 663px;
+		}
+
+		app-cam {
+			height: 214px;
 		}
 	}
 }
