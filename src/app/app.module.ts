@@ -40,6 +40,7 @@ import {
 } from './components/competitions/competitions.component';
 import { ClockComponent } from './components/clock/clock.component';
 import { WindyComponent } from './components/windy/windy.component';
+import { BookingComponent } from './components/booking/booking.component';
 
 @NgModule({
 	declarations: [
@@ -49,7 +50,8 @@ import { WindyComponent } from './components/windy/windy.component';
 		TeetimesComponent,
 		CompetitionsComponent,
 		WindyComponent,
-		ClockComponent
+		ClockComponent,
+		BookingComponent
 	],
 	imports: [
 		BrowserModule,
