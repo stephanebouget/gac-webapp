@@ -1,10 +1,71 @@
 <div class="dashboard-comp" fxLayout="row" fxLayoutAlign="center center">
-	<div id="loading" fxFlexFill fxLayout="column" fxLayoutAlign="center center" *ngIf="isLoadingView">
-		<img class="box" src='assets/img/logo.png' width="156px" height="72px">
+	<div
+		id="loading"
+		fxFlexFill
+		fxLayout="column"
+		fxLayoutAlign="center center"
+		*ngIf="isLoadingView"
+	>
+		<img
+			class="box"
+			src="assets/img/logo.png"
+			width="156px"
+			height="72px"
+		/>
 	</div>
-	<div class="dashboard-comp-content" fxLayout="row" fxLayoutAlign="start start">
-		<div class="col" fxFlex fxLayout="column" fxLayoutAlign="start center">
-			<img class="box" src='assets/img/banner.png' width="400px" height="80px">
+	<div
+		class="dashboard-comp-content"
+		fxLayout="column"
+		fxLayoutAlign="start start"
+	>
+		<div fxFlex fxLayout="row" fxLayoutAlign="start start">
+			<div fxLayout="column" fxLayoutAlign="start start">
+				<div fxFlex fxLayout="row" fxLayoutAlign="start center">
+					<img
+						class="box"
+						src="assets/img/banner.png"
+						width="354px"
+						height="214px"
+					/>
+					<app-clock class="box"></app-clock>
+					<app-cam class="box"></app-cam>
+				</div>
+				<app-weather-week class="box"></app-weather-week>
+			</div>
+			<div fxLayout="column" fxLayoutAlign="start start">
+				<app-weather class="box"></app-weather>
+				<div fxFlex fxLayout="row" fxLayoutAlign="start center">
+					<a href="https://www.isp-golf.fr/" target="_blank">
+						<img
+							class="box"
+							src="assets/img/isp.png"
+							width="554px"
+							height="89px"
+					/></a>
+					<img
+						class="box"
+						src="assets/img/bird.png"
+						width="361px"
+						height="89px"
+					/>
+				</div>
+			</div>
+		</div>
+		<div fxFlex fxLayout="row" fxLayoutAlign="start center">
+			<app-windy [iframeUrl]="iframeWindy1Url" class="box"></app-windy>
+			<app-windy [iframeUrl]="iframeWindy3Url" class="box"></app-windy>
+			<app-windy [iframeUrl]="iframeWindy2Url" class="box"></app-windy>
+		</div>
+		<div fxFlex fxLayout="row" fxLayoutAlign="start start">
+			<div fxFlex fxLayout="row" fxLayoutAlign="start center">
+				<app-teetimes class="box"></app-teetimes>
+				<app-competitions class="box"></app-competitions>
+			</div>
+			<div fxFlex fxLayout="column" fxLayoutAlign="start center">
+				<app-booking class="box"></app-booking>
+			</div>
+		</div>
+		<!-- <div class="col" fxFlex fxLayout="column" fxLayoutAlign="start center">
 			<div fxLayout="row" fxLayoutAlign="start start">
 				<app-current-weather-item class="box  box-md"></app-current-weather-item>
 				<app-clock class="box box-sm"></app-clock>
@@ -20,12 +81,6 @@
 			<app-windy [iframeUrl]="iframeWindy3Url" class="box box-big"></app-windy>
 			<app-windy [iframeUrl]="iframeWindy2Url" class="box box-big"></app-windy>
 		</div>
-		<div class="col" fxFlex fxLayout="column" fxLayoutAlign="start center">
-			<app-teetimes class="box"></app-teetimes>
-			<app-competitions class="box"></app-competitions>
-		</div>
-		<div class="col col-xl" fxFlex fxLayout="column" fxLayoutAlign="start center">
-			<app-booking class="box box-xl"></app-booking>
-		</div>
+	 -->
 	</div>
 </div>

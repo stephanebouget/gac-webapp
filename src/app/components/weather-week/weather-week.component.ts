@@ -1,33 +1,27 @@
-import {
-	Component,
-	OnInit
-} from '@angular/core';
-import {
-	WeatherService
-} from '../weather/weather.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
 	selector: 'app-weather-week',
 	templateUrl: './weather-week.component.html',
-	styleUrls: ['./weather-week.component.scss']
+	styleUrls: ['./weather-week.component.scss'],
 })
 export class WeatherWeekComponent implements OnInit {
+	iframeUrl: string;
 
+	loadingDatas = false;
+	src: any;
 
-	weathers: any;
-	// loadingDatas = false;
-
-	constructor(private weatherService: WeatherService) {}
+	constructor(public sanitizer: DomSanitizer) {}
 
 	ngOnInit(): void {
-		// this.loadingDatas = true;
 
-		this.weatherService.getWeatherDay().then((datas: any) => {
-			this.weathers = datas.weathers;
-			// setTimeout(() => {
-			// 	this.loadingDatas = false;
-			// }, 100);
-		});
+		this.iframeUrl =
+			'https://www.lameteoagricole.net/previsions-meteo-agricole/Pleumeur-Bodou-22560.html?';
+
+		this.iframeUrl = this.iframeUrl + Date.now();
+		this.src = this.sanitizer.bypassSecurityTrustResourceUrl(
+			this.iframeUrl
+		);
 	}
-
 }

@@ -1,16 +1,14 @@
 .weather-week-comp {
-	width: 100%;
+    width: 1600px;
+    height: 100%;
+    padding-top: 0px;
+    position: relative;
 
-	.title {
-		background: #334173;
-		color: white;
-		height: 50px;
-	}
-
-	ul {
-		height: 500px;
-
-		padding: 0;
-		margin: 0;
+	#iframe-weather-week {
+		top: -459px;
+		left: -194px;
+		width: calc(100% + 42px) !important;
+		height: 200vh !important;
+		overflow: hidden;
 	}
 }

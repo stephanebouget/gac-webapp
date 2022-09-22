@@ -1,21 +1,6 @@
 <div class="weather-week-comp">
-	<div fxLayout="column" class="header">
-		<div fxLayout="row" fxLayoutAlign="center center" class="title">
-			METEO 7 jours
-		</div>
-		<div fxLayout="row" fxLayoutAlign="start center" id="header-legend">
-			<div fxFlex="26" class="empty"></div>
-			<div fxFlex="13" class="weather-item temp">t°</div>
-			<div fxFlex="12" class="weather-item cloudiness">Neb</div>
-			<div fxFlex="10" class="weather-item rain">Proba Pluie</div>
-			<div fxFlex="10" class="weather-item rainQuantity">Quant pluie</div>
-			<div fxFlex="10" class="weather-item wind">Vent</div>
-			<div fxFlex="15" class="weather-item windSpeed">Moy Rafales</div>
-		</div>
-	</div>
-	<ul fxLayout="column">
-		<li *ngFor="let weather of weathers; let i = index">
-			<app-weather-item [weather]="weather"></app-weather-item>
-		  </li>
-	</ul>
+
+	<iframe id="iframe-weather-week" fxFlexFill scrolling="no" [hidden]="loadingDatas" frameBorder="0" style="position: absolute; height: 100%; border: none"
+		[src]="src ? src : null"></iframe>
+
 </div>
